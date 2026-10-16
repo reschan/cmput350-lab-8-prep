@@ -6,8 +6,8 @@ int main() {
     sf::RenderWindow window(sf::VideoMode({256, 256}), "Sprites lab", sf::State::Windowed);
     sf::Texture texture("assets/sword_diamond.png");
     sf::Texture texture2("assets/spritesheet_items.png");
-    Sprite s(texture);
-    // Sprite s(texture2, { 0, 512 }, { 128, 640 }); // should be equivalent to using texture
+    //Sprite s(texture);
+    Sprite s(texture2, { 0, 512 }, { 128, 640 }); // should be equivalent to using texture
     s.origin() = {114, 14};
     s.position() = {128, 128};
     s.scale().x = -1;
@@ -21,7 +21,7 @@ int main() {
         }
         s.position() = sf::Vector2f(sf::Mouse::getPosition(window));
         sf::RenderStates states{};
-        window.clear(sf::Color::White);
+        window.clear(sf::Color::Black);
         s.draw(window, states);
         window.display();
     }

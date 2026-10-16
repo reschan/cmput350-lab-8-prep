@@ -1,0 +1,20 @@
+1. 
+rect of (400, 300)
+Top left half:
+(200, 150), (200, 450), (600, 150)
+
+Bottom right half:
+(600, 150), (200, 450) , (600, 450)
+
+2.
+To represent the same Rectangle with two triangle as desired,
+Hold one triangle, e.g. (200, 150), (600, 150), (200, 450)
+Make a duplicate and rotate it at the center of hypothenuse by 180 degrees.
+
+This way we only have to hold one triangle, thus 3 points in the memory, and a rotation float. -> 16 bytes vs 24 bytes in (a)
+if we use doubles instead, it'd be 20 bytes.
+
+3.
+(500 - 200) / 400 = 0.75
+(301 - 150) / 300 = 0.503
+(0.625, 0.501667)
